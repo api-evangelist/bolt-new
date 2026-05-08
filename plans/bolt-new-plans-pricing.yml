@@ -5,7 +5,7 @@ provider: Bolt.new
 providerId: bolt-new
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - No-Code
@@ -13,29 +13,98 @@ tags:
 - WebContainers
 - StackBlitz
 - Plans
-description: Placeholder plans/pricing artifact for Bolt.new. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: Bolt.new is sold as a usage-based AI builder priced in monthly tokens. There is no separate public API SKU — tokens are consumed by interactive prompts in the in-browser builder.
+notes: Bolt.new does not publish a developer API. Plan tiers reflect the consumer/team product. Token allotments and overage pricing are subject to change; verify against support.bolt.new.
 sources:
 - https://bolt.new/
+- https://support.bolt.new/
 plans:
-- id: bolt-new-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: bolt-new-free
+  name: Free
+  type: free
+  description: Limited daily token allotment for experimentation in the in-browser builder.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Monthly Tokens
+    name: monthly_tokens
+    type: included
+    metric: tokens
+    limit: 150000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0
+    userMultiplied: false
+  elements:
+  - name: WebContainer Runtime
+  - name: Live Preview
+  - name: Public Projects
+- id: bolt-new-pro
+  name: Pro
+  type: paid
+  description: Individual paid plan with substantially larger monthly token allotment and private projects.
+  entries:
+  - label: Monthly Subscription
+    name: monthly_subscription
     type: flat
-    metric: varies
+    metric: subscription
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 20
+    userMultiplied: false
+  - label: Monthly Tokens
+    name: monthly_tokens
+    type: included
+    metric: tokens
+    limit: 10000000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0
+    userMultiplied: false
+  elements:
+  - name: Private Projects
+  - name: Higher Token Allotment
+  - name: Priority Build Resources
+- id: bolt-new-teams
+  name: Teams
+  type: paid
+  description: Team plan with shared seats and pooled token allotment.
+  entries:
+  - label: Per Seat
+    name: per_seat
+    type: flat
+    metric: seat
     limit: -1
-    timeFrame: usage
+    timeFrame: month
     geo: global
     unit: 1
     price: see https://bolt.new/
+    userMultiplied: true
+  elements:
+  - name: Shared Workspaces
+  - name: Pooled Tokens
+  - name: Centralized Billing
+- id: bolt-new-enterprise
+  name: Enterprise
+  type: enterprise
+  description: Custom contracts with SSO, audit, and dedicated support.
+  entries:
+  - label: Custom
+    name: custom
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: SSO
+  - name: SOC 2
+  - name: Dedicated Support
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

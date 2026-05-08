@@ -5,7 +5,7 @@ provider: Bolt.new
 providerId: bolt-new
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - No-Code
@@ -13,12 +13,12 @@ tags:
 - WebContainers
 - StackBlitz
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Bolt.new. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: Bolt.new is a token-metered AI builder. FinOps levers center on managing per-seat subscriptions and per-month token consumption.
+notes: Bolt.new does not publish a public REST API; cost data must be collected from invoices and the in-app usage view.
 sources:
 - https://bolt.new/
+- https://support.bolt.new/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -26,41 +26,46 @@ alignedWith:
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-publisherName: Bolt.new
+publisherName: StackBlitz, Inc.
 serviceCategory: AI
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + Usage
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
   - Usage
   - Purchase
-  - Adjustment
 focusColumns:
   ServiceName: Bolt.new
   ServiceCategory: AI
-  ProviderName: Bolt.new
-  PublisherName: Bolt.new
-  InvoiceIssuerName: Bolt.new
+  ProviderName: StackBlitz
+  PublisherName: StackBlitz
+  InvoiceIssuerName: StackBlitz
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: tokens
+  description: AI prompt tokens consumed by the builder.
+  unit: token
   aggregation: sum
   dimensions:
   - account
-  - resource
+  - workspace
+- name: seats
+  description: Active seats on Teams plans.
+  unit: seat
+  aggregation: max
+  dimensions:
+  - workspace
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Pull invoices and the in-app token usage view; there is no usage export API.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Allocate by workspace/team since invoices are at the account level.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Right-size plan tier; scope prompts narrowly to limit token burn; archive idle workspaces.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Designate workspace owners to review token consumption against monthly allotments.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

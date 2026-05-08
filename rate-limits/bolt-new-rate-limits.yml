@@ -5,7 +5,7 @@ provider: Bolt.new
 providerId: bolt-new
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - No-Code
@@ -13,23 +13,29 @@ tags:
 - WebContainers
 - StackBlitz
 - Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Bolt.new. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: Bolt.new throttles consumption via monthly token allotments rather than per-second HTTP rate limits. There is no public API surface to rate-limit.
+notes: No documented HTTP API; usage is gated by token quota per plan tier. Daily reload caps may apply on the Free plan.
 sources:
 - https://bolt.new/
+- https://support.bolt.new/
 responseCodes:
-  throttled: 429
+  throttled: n/a
 limits:
-- name: Default
+- name: Free Daily Tokens
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: tokens
+  limit: capped daily allotment that resets each day
+  notes: Free users get a small daily allotment for experimentation.
+- name: Plan Token Quota
+  scope: account
+  metric: tokens
+  limit: monthly token allotment per plan
+  notes: When monthly tokens are exhausted, builds and prompts are blocked until the next billing cycle or until the user upgrades / buys a top-up.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+- name: Token Budgeting
+  description: Users should budget token usage; the in-browser UI surfaces remaining tokens.
+- name: Upgrade or Top-Up
+  description: When tokens are exhausted, upgrade plan or purchase a token top-up.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
