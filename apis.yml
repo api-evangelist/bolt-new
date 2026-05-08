@@ -1,0 +1,29 @@
+aid: bolt-new
+url: https://raw.githubusercontent.com/api-evangelist/bolt-new/refs/heads/main/apis.yml
+name: Bolt.new
+x-type: company
+description: >-
+  Bolt.new is StackBlitz's in-browser AI app builder. Generates, edits, and runs full-stack web applications in WebContainers with live preview, terminal, and one-click deploy to Netlify.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - No-Code
+  - App Builder
+  - WebContainers
+  - StackBlitz
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://bolt.new/
+  - type: Plans
+    url: plans/bolt-new-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/bolt-new-rate-limits.yml
+  - type: FinOps
+    url: finops/bolt-new-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
