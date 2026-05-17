@@ -1,7 +1,7 @@
 aid: bolt-new
 url: https://raw.githubusercontent.com/api-evangelist/bolt-new/refs/heads/main/apis.yml
 name: Bolt.new
-x-type: company
+kind: company
 description: >-
   Bolt.new is StackBlitz's in-browser AI app builder. Generates, edits, and runs full-stack web applications in WebContainers with live preview, terminal, and one-click deploy to Netlify. Bolt.new does not currently expose a public REST/HTTP developer API — it is a hosted, UI-driven product. The underlying WebContainer runtime is offered separately as a JavaScript SDK (StackBlitz WebContainer API).
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
