@@ -16,6 +16,10 @@ modified: '2026-05-08'
 specificationVersion: '0.19'
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/stackblitz
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/boltdotnew
   - type: Website
     url: https://bolt.new/
   - type: Documentation
