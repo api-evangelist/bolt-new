@@ -1,41 +1,100 @@
 aid: bolt-new
-url: https://raw.githubusercontent.com/api-evangelist/bolt-new/refs/heads/main/apis.yml
 name: Bolt.new
-kind: company
 description: >-
-  Bolt.new is StackBlitz's in-browser AI app builder. Generates, edits, and runs full-stack web applications in WebContainers with live preview, terminal, and one-click deploy to Netlify. Bolt.new does not currently expose a public REST/HTTP developer API — it is a hosted, UI-driven product. The underlying WebContainer runtime is offered separately as a JavaScript SDK (StackBlitz WebContainer API).
+  Bolt.new is StackBlitz's in-browser AI full-stack app builder. From a natural
+  language prompt it generates, edits, runs, and deploys complete web
+  applications inside the user's browser tab using StackBlitz's WebContainer
+  runtime — a WebAssembly-based Node.js operating system that boots a real
+  filesystem, npm/pnpm/yarn package manager, terminal, and live preview
+  without a remote VM. The product targets product managers, entrepreneurs,
+  marketers, agencies, and non-engineer builders with conversational app
+  creation, design-system import from Figma and component libraries
+  (Material UI, Chakra UI, Shadcn/ui), built-in database and authentication,
+  one-click deploy to Netlify or bolt.host, custom domains, GitHub version
+  control, and integrations with Supabase, Stripe, Expo, and MCP servers.
+  Bolt.new itself is a hosted, UI-driven product metered in monthly AI tokens
+  with Free, Pro, Teams, and Enterprise tiers — there is no public REST/HTTP
+  developer API or CLI. StackBlitz separately ships the WebContainer API as a
+  JavaScript/TypeScript SDK (npm @webcontainer/api) for embedding the same
+  in-browser dev environment in third-party sites, plus a StackBlitz SDK
+  (@stackblitz/sdk) for programmatically opening projects. The Bolt.new
+  reference codebase is open source under MIT at github.com/stackblitz/bolt.new
+  as a foundation for building custom AI dev agents; the hosted commercial
+  product is closed source.
+type: Index
+position: Provider
+access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
+  - AI App Builder
   - No-Code
-  - App Builder
+  - Low-Code
+  - Full-Stack
   - WebContainers
+  - In-Browser IDE
+  - WebAssembly
+  - Node.js
   - StackBlitz
+  - Generative UI
+  - Vibe Coding
+  - Agent
+  - Netlify
+  - Supabase
+url: https://raw.githubusercontent.com/api-evangelist/bolt-new/refs/heads/main/apis.yml
 created: '2026-05-08'
-modified: '2026-05-08'
-specificationVersion: '0.19'
+modified: '2026-05-25'
+specificationVersion: '0.20'
 apis: []
 common:
-  - type: GitHubOrganization
-    url: https://github.com/stackblitz
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/boltdotnew
   - type: Website
     url: https://bolt.new/
+  - type: Parent
+    url: https://stackblitz.com
   - type: Documentation
     url: https://support.bolt.new/
+  - type: LLMsTxt
+    url: https://support.bolt.new/llms.txt
+  - type: Pricing
+    url: https://pricing.bolt.new
   - type: SignUp
     url: https://bolt.new/
-  - type: Pricing
-    url: https://bolt.new/
+  - type: WebContainerAPI
+    url: https://webcontainers.io
+  - type: WebContainerSDK
+    url: https://www.npmjs.com/package/@webcontainer/api
+  - type: StackBlitzSDK
+    url: https://github.com/stackblitz/sdk
+  - type: OpenSourceRepo
+    url: https://github.com/stackblitz/bolt.new
+  - type: GitHubOrganization
+    url: https://github.com/stackblitz
+  - type: TutorialKit
+    url: https://github.com/stackblitz/tutorialkit
+  - type: Starters
+    url: https://github.com/stackblitz/starters
+  - type: WebContainerCore
+    url: https://github.com/stackblitz/webcontainer-core
+  - type: Enterprise
+    url: https://stackblitz.com/enterprise
+  - type: DesignSystems
+    url: https://stackblitz.com/enterprise/design-systems
+  - type: Careers
+    url: https://stackblitz.com/careers
+  - type: Discord
+    url: https://discord.com/invite/stackblitz
+  - type: Twitter
+    url: https://twitter.com/boltdotnew
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/boltdotnew
+  - type: YouTube
+    url: https://www.youtube.com/@boltdotnew
   - type: Plans
     url: plans/bolt-new-plans-pricing.yml
   - type: RateLimits
     url: rate-limits/bolt-new-rate-limits.yml
   - type: FinOps
     url: finops/bolt-new-finops.yml
-  - type: LLMsTxt
-    url: https://support.bolt.new/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
