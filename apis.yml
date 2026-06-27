@@ -53,11 +53,11 @@ common:
     url: https://stackblitz.com
   - type: Documentation
     url: https://support.bolt.new/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://support.bolt.new/llms.txt
   - type: Pricing
     url: https://pricing.bolt.new
-  - type: SignUp
+  - type: Signup
     url: https://bolt.new/
   - type: WebContainerAPI
     url: https://webcontainers.io
