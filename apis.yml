@@ -47,6 +47,10 @@ modified: '2026-05-25'
 specificationVersion: '0.20'
 apis: []
 common:
+  - type: TrustCenter
+    url: security/bolt-new-trust-center.yml
+  - type: DomainSecurity
+    url: security/bolt-new-domain-security.yml
   - type: Website
     url: https://bolt.new/
   - type: Parent
@@ -95,6 +99,8 @@ common:
     url: rate-limits/bolt-new-rate-limits.yml
   - type: FinOps
     url: finops/bolt-new-finops.yml
+  - type: Blog
+    url: https://blog.stackblitz.com/rss.xml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
