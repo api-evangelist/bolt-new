@@ -1,0 +1,13 @@
+{
+  "repo": "bolt-new",
+  "feeds": [
+    {
+      "source": "https://blog.stackblitz.com/rss.xml",
+      "feed_url": "https://blog.stackblitz.com/rss.xml",
+      "title": "StackBlitz Blog",
+      "saved": 25
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 50
+}
