@@ -2,6 +2,7 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://aws.amazon.com/marketplace/
+- netlify/integrations/netlify-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -19,3 +20,23 @@ edges:
   seller_name: Bolt.new
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: Netlify (own)
+  partner: netlify
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.netlify.com/integrations/bolt/
+  mirror_of: netlify/integrations/netlify-integration-edges.yml
+  apps:
+  - Bolt
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Search
+  partner_tier: listing
+source:
+- netlify/integrations/netlify-integration-edges.yml
