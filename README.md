@@ -1,4 +1,4 @@
-# Bolt.new (bolt-new)
+# Bolt.new
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,69 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bolt.new is StackBlitz's in-browser AI full-stack app builder. From a chat prompt it generates, runs, and deploys complete web applications inside a browser tab using the WebContainer WebAssembly runtime — npm, Node.js, terminal, and live preview with no remote VM.
+Bolt.new is StackBlitz's in-browser AI full-stack app builder. From a natural language prompt it generates, edits, runs, and deploys complete web applications inside the user's browser tab using StackBlitz's WebContainer runtime — a WebAssembly-based Node.js operating system that boots a real filesystem, npm/pnpm/yarn package manager, terminal, and live preview without a remote VM. The product targets product managers, entrepreneurs, marketers, agencies, and non-engineer builders with conversational app creation, design-system import from Figma and component libraries (Material UI, Chakra UI, Shadcn/ui), built-in database and authentication, one-click deploy to Netlify or bolt.host, custom domains, GitHub version control, and integrations with Supabase, Stripe, Expo, and MCP servers. Bolt.new itself is a hosted, UI-driven product metered in monthly AI tokens with Free, Pro, Teams, and Enterprise tiers — there is no public REST/HTTP developer API or CLI. StackBlitz separately ships the WebContainer API as a JavaScript/TypeScript SDK (npm @webcontainer/api) for embedding the same in-browser dev environment in third-party sites, plus a StackBlitz SDK (@stackblitz/sdk) for programmatically opening projects. The Bolt.new reference codebase is open source under MIT at github.com/stackblitz/bolt.new as a foundation for building custom AI dev agents; the hosted commercial product is closed source.
 
-> **Honest skip:** Bolt.new is a hosted, UI-driven product metered in monthly AI tokens. It does **not** publish a public REST/HTTP developer API or CLI. The related StackBlitz WebContainer API and StackBlitz SDK are JavaScript/TypeScript libraries (npm packages), not HTTP APIs, and are profiled separately under those repos.
+**Areas:** Artificial Intelligence · AI App Builder · No-Code · Low-Code · Full-Stack · WebContainers · In-Browser IDE · WebAssembly · Node.js · StackBlitz · Generative UI · Vibe Coding
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/bolt-new/refs/heads/main/apis.yml)
+## Bolt.new on APIs.io
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=bolt-new-api-evangelist&utm_content=repo)
+Everything profiled for Bolt.new is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bolt-new/](https://apis.io/providers/bolt-new/)** — or go straight to one of the APIs or properties below.
 
-## Type
-- **x-type:** company (Tier-3 — no public HTTP API)
+### Published properties
 
-## Position
-- **Position:** Provider
-- **Access:** 3rd-Party
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## What Bolt.new Is
-- Conversational AI app builder for full-stack web apps
-- Runs entirely in the browser via StackBlitz WebContainers (WebAssembly Node.js OS)
-- Built-in database, auth, file storage, secrets, server functions, email
-- One-click publish to `bolt.host` or connect a custom domain
-- Deploy to Netlify, sync to GitHub, import from Figma, payments via Stripe, mobile via Expo
-- MCP server connections from within projects
-- Open-source reference codebase at `github.com/stackblitz/bolt.new` (MIT) as a foundation for custom AI dev agents
+#### MCP servers (1)
 
-## What It Is Not
-- Not a developer API platform — no REST/HTTP endpoints, no API keys, no webhooks
-- Not a CLI tool — interaction is through the hosted chat UI
-- Pricing is token-metered, not request-metered
+Model Context Protocol servers that expose the API to agents.
 
-## APIs
-None published. `apis: []` is intentional.
+- [Moved to /providers/bolt-new/](https://apis.io/servers/bolt-new/bolt-new/)
 
-## Tags
-- AI, AI App Builder, No-Code, Low-Code, Full-Stack, WebContainers, In-Browser IDE, WebAssembly, Node.js, StackBlitz, Generative UI, Vibe Coding, Agent, Netlify, Supabase
+#### Security (2)
 
-## Timestamps
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-25
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Bolt New Domain Security](https://apis.io/security/bolt-new/bolt-new-domain-security/)
+- [Bolt New Trust Center](https://apis.io/security/bolt-new/bolt-new-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bolt New Plans Pricing](https://apis.io/plans/bolt-new/bolt-new-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bolt New Rate Limits](https://apis.io/rate-limits/bolt-new/bolt-new-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bolt New Finops](https://apis.io/finops/bolt-new/bolt-new-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://bolt.new/)
-- [Parent — StackBlitz](https://stackblitz.com)
 - [Documentation](https://support.bolt.new/)
-- [LLMs.txt](https://support.bolt.new/llms.txt)
 - [Pricing](https://pricing.bolt.new)
-- [WebContainer API](https://webcontainers.io)
-- [WebContainer SDK (npm)](https://www.npmjs.com/package/@webcontainer/api)
-- [StackBlitz SDK](https://github.com/stackblitz/sdk)
-- [Open-source bolt.new repo](https://github.com/stackblitz/bolt.new)
-- [GitHub Organization](https://github.com/stackblitz)
-- [TutorialKit](https://github.com/stackblitz/tutorialkit)
-- [Starters](https://github.com/stackblitz/starters)
-- [WebContainer Core](https://github.com/stackblitz/webcontainer-core)
-- [StackBlitz Enterprise](https://stackblitz.com/enterprise)
-- [Discord](https://discord.com/invite/stackblitz)
-- [Plans](plans/bolt-new-plans-pricing.yml) — token-metered Free / Pro / Teams / Enterprise
-- [RateLimits](rate-limits/bolt-new-rate-limits.yml) — quota-based, no HTTP rate limits
-- [FinOps](finops/bolt-new-finops.yml) — FOCUS-aligned, subscription + token usage
+- [Blog](https://blog.stackblitz.com/rss.xml)
+- [GitHub](https://github.com/stackblitz)
 
-## Integrations Documented
-Supabase, Netlify, Figma, Stripe, Expo, GitHub, Google SSO, Google Stitch, Lovable, MCP servers.
+## API Evangelist rating
 
-## Maintainers
-**FN:** Kin Lane
+**Kin Score 16.3** — emerging · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 34.2 |
+
+**Agent readiness 9.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bolt-new/](https://apis.io/providers/bolt-new/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bolt.new: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bolt-new/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
